@@ -3,7 +3,7 @@
 This week we will create geometries, reproject data and do geometric calculations using Geopandas (+ Shapely and pyproj).
 
 
-- **Exercise 9 is due by 9am on the 7th of June 2021**.
+- **Exercise 9 is due by 9am on the 14th of June 2021**.
 
 - Don't forget to check out the [hints for this week's exercise](https://autogis-site.readthedocs.io/en/latest/lessons/L2/exercise-2.html#hints)
 
