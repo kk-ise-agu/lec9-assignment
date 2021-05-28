@@ -1,20 +1,28 @@
-# Exercise 8: Working with Geometric Objects
+# Exercise 9
 
-This week we will practice how to create geometric objects using Shapely in Python. In the first set of problems (1-2) you will define your own functions for handling geometric objects. In the second set of problems (3-4), you will read in data from a file using Pandas and create geometries based on coordinate information in the input data. 
+This week we will create geometries, reproject data and do geometric calculations using Geopandas (+ Shapely and pyproj).
 
 
-- **Exercise 8 is due by 7th of June at 9 am**.
+- **Exercise 9 is due by 9am on the 7th of June 2021**.
 
-## Note
+- Don't forget to check out the [hints for this week's exercise](https://autogis-
 
-#### Solution code cells
-Fill in the parts saying "YOUR CODE HERE *"
+## Sections
+
+ - Problem 1: Create Polygon from lists of coordinates
+ - Problem 2: Points to map
+ - Problem 3: How long distance individuals have travelled? 
+ 
+
+#### Solution code 
+Add your programs in the parts "YOUR CODE HERE *" 
 
 ```
-# YOUR CODE HERE 1
+# YOUR CODE HERE 1 .....
 ```
 
-## Start working
 
- - [Problems 1 and 2 ](Exercise_1_problem_1_2.py)
- - [Problems 3 and 4 ](Exercise_1_problem_3_4.py)
+ 
+ 
+ 
+  
