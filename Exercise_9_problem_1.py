@@ -3,16 +3,6 @@
 
 # ## Problem 1: Create Polygon from lists of coordinates
 # 
-# In the first problem **the aim is to create a polygon based on the provided coordinates, and to plot the polygon on as a map.** 
-# 
-# Two lists;``longitudes`` and``latitudes`` contain the input coordinates for the polygon. The first coordinate pair looks like this: ``(29.99671173095703, 63.748023986816406)``.
-#  
-# The codeblocks below help you get started with the task. More detailed instructions are given below. 
-# 
-
-# In[ ]:
-
-
 import os
 import geopandas as gpd
 import matplotlib.pyplot as plt
@@ -36,79 +26,36 @@ latitudes = [63.748023986816406, 62.90789794921875, 60.511383056640625, 60.44499
            68.84700012207031, 68.53485107421875, 67.69471740722656, 66.90360260009766, 65.70887756347656, 65.6533203125, 64.92096710205078, 64.22373962402344, 63.748023986816406]
 
 
-# **First, create a Polygon variable `poly` based on the coordinates:**
-# - Create a list of coordinate pairs based on the provided longitudes and latitudes and store the list in a variable `coordpairs`. A coordinate pair can be either a tuple or a list.
-# - Create a shapely Polygon using the `coordpairs` -list. Store the polygon in a variable `poly`.
-# 
-# Please use the provided variable names (replace ``None`` with your own code).
-
-# In[ ]:
-
-
 # Create a list of coordinate pairs
 # YOUR CODE HERE 1 
-coordpairs =[]
-for i in range(len(longitudes)):
-    coordpairs.append( [longitudes[i],latitudes[i]]  )
 
 # Create a shapely Polygon using the 'coordpairs' -list
-poly = None
 # YOUR CODE HERE 2 
-#raise NotImplementedError()
-poly = Polygon(coordpairs)
-poly
+poly = None
 
-
-# In[ ]:
-
-
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the first coordinate pair. Shoud be: (29.99671173095703, 63.748023986816406)
 print(coordpairs[0])
 
-
-# In[ ]:
-
-
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the data type of your polygon:
 print(poly.geom_type)
 
-
 # **Insert the polygon into a GeoDataFrame called `geo`:**
-# - Create an empty geodataframe variable `geo`
-# - Insert our `poly` -polygon into the `geo` GeoDataFrame into a new column named 'geometry'
-# 
-# Please use the provided variable names (replace `None` with your own code).
-
-# In[ ]:
-
 
 # Create an empty GeoDataFrame
 geo = None
 geo = gpd.GeoDataFrame()
-# Insert the 'poly' -polygon into the 'geo' GeoDataFrame into a new column named 'geometry' 
-# REPLACE THE ERROR BELOW WITH YOUR OWN CODE
-#raise NotImplementedError()
-geo = gpd.GeoDataFrame(index=[0], columns=['geometry'])
-geo['geometry'] = poly
+# YOUR CODE HERE 3
 
-
-# In[ ]:
-
-
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the content of the GeoDataFrame:
 print(geo.head())
 
-
-# In[ ]:
-
-
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the number of rows:
 print(len(geo))
@@ -117,43 +64,25 @@ print(len(geo))
 # **Finally:**
 # - plot the polygon. Note: you might need to call `matplotlib pyplot show()` -method in order to display the map
 
-# In[ ]:
-
-
 # Plot the polygon. What shape is it :) ?
-# REPLACE THE ERROR BELOW WITH YOUR OWN CODE
-#raise NotImplementedError()#
-geo.plot()
-
+# YOUR CODE HERE 4
 
 # What can you see on the map? :) 
 
 # - save the GeoDataFrame into a Shapefile called `'polygon.shp'`. 
 
-# In[ ]:
-
-
 # Save the GeoDataFrame into a new Shapefile called 'polygon.shp'.
 fp = 'polygon.shp'
 
-# REPLACE THE ERROR BELOW WITH YOUR OWN CODE
-fp = 'polygon.shp'
-geo.to_file(fp)
+# YOUR CODE HERE 5
 
-
-# In[ ]:
-
-
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 #Check if output file exists
 assert os.path.isfile(fp), "Output file does not exits."
 
 
 # Next, you can continue to Exercise_9_problem_2.
-
-# In[ ]:
-
 
 
 

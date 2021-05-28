@@ -48,16 +48,13 @@ for i in range(len(longitudes)):
     coordpairs.append( [longitudes[i],latitudes[i]]  )
 
 # Create a shapely Polygon using the 'coordpairs' -list
-poly = None
 # YOUR CODE HERE 2 
-#raise NotImplementedError()
-poly = Polygon(coordpairs)
-poly
+poly = None
 ```
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the first coordinate pair. Shoud be: (29.99671173095703, 63.748023986816406)
 print(coordpairs[0])
@@ -65,7 +62,7 @@ print(coordpairs[0])
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the data type of your polygon:
 print(poly.geom_type)
@@ -83,15 +80,12 @@ Please use the provided variable names (replace `None` with your own code).
 geo = None
 geo = gpd.GeoDataFrame()
 # Insert the 'poly' -polygon into the 'geo' GeoDataFrame into a new column named 'geometry' 
-# REPLACE THE ERROR BELOW WITH YOUR OWN CODE
-#raise NotImplementedError()
-geo = gpd.GeoDataFrame(index=[0], columns=['geometry'])
-geo['geometry'] = poly
+# YOUR CODE HERE 3
 ```
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the content of the GeoDataFrame:
 print(geo.head())
@@ -99,7 +93,7 @@ print(geo.head())
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the number of rows:
 print(len(geo))
@@ -111,8 +105,7 @@ print(len(geo))
 
 ```python
 # Plot the polygon. What shape is it :) ?
-# REPLACE THE ERROR BELOW WITH YOUR OWN CODE
-#raise NotImplementedError()#
+# YOUR CODE HERE 4
 geo.plot()
 ```
 
@@ -125,14 +118,12 @@ What can you see on the map? :)
 # Save the GeoDataFrame into a new Shapefile called 'polygon.shp'.
 fp = 'polygon.shp'
 
-# REPLACE THE ERROR BELOW WITH YOUR OWN CODE
-fp = 'polygon.shp'
-geo.to_file(fp)
+#  YOUR CODE HERE 5
 ```
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 #Check if output file exists
 assert os.path.isfile(fp), "Output file does not exits."
@@ -140,7 +131,3 @@ assert os.path.isfile(fp), "Output file does not exits."
 
 Next, you can continue to Exercise_9_problem_2.
 
-
-```python
-
-```

@@ -40,37 +40,24 @@ You want to create a Shapely point *on each row*, based on columns `'lon'` and `
 - a `for`-loop and a zipped object containing lon and lat (created using `zip`) and use the Point constructor on each lat, lon coordinate pair.
 
 
-
-
-
-
-
 ```python
-# YOUR CODE HERE 1
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
 data=pd.read_csv("data/some_posts.csv")
-#raise NotImplementedError()
-data
-data['geometry']=gpd.GeoSeries(dtype=object)
-data.head()
-geometry = [Point(xy) for xy in zip(data.lon, data.lat)]
-data['geometry']=geometry
-data['geometry']
+# YOUR CODE HERE 1
 ```
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the result
 print("Number of rows:", len(data))
 ```
 
-
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the result
 print(data['geometry'].head())
@@ -83,25 +70,17 @@ print(data['geometry'].head())
 
 - Save the data into a Shapefile called `Kruger_posts.shp`
 
-
-
-
 ```python
-# YOUR CODE HERE 2
 import geopandas as gpd
 from pyproj import CRS
 
+# YOUR CODE HERE 2
 # Convert DataFrame into a GeoDataFrame
-geo = gpd.GeoDataFrame(data, geometry='geometry', crs=CRS.from_epsg(4326).to_wkt())
-
-type(geo)
-fp="Kruger_posts.shp"
-geo.to_file(fp)
 ```
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check the geodataframe head
 print("Number of rows:", len(geo))
@@ -110,7 +89,7 @@ print(geo.head())
 
 
 ```python
-# NON-EDITABLE CODE CELL FOR TESTING YOUR SOLUTION
+# CODE FOR TESTING YOUR SOLUTION
 
 # Check that the output file exists
 import os
@@ -122,11 +101,9 @@ assert os.path.isfile(fp), "output shapefile does not exist"
 
 
 ```python
-# REPLACE THE ERROR BELOW WITH YOUR OWN CODE
-#raise NotImplementedError()
-geo.plot()
+# YOUR CODE HERE 3
 ```
 
 
 
-Well done! Now you can move on to Exercise_9_problem_3.ipynb.
+Well done! Now you can move on to Exercise_9_problem_3.
