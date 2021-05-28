@@ -43,9 +43,6 @@ Please use the provided variable names (replace ``None`` with your own code).
 ```python
 # Create a list of coordinate pairs
 # YOUR CODE HERE 1 
-coordpairs =[]
-for i in range(len(longitudes)):
-    coordpairs.append( [longitudes[i],latitudes[i]]  )
 
 # Create a shapely Polygon using the 'coordpairs' -list
 # YOUR CODE HERE 2 
