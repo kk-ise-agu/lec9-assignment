@@ -44,7 +44,6 @@ You want to create a Shapely point *on each row*, based on columns `'lon'` and `
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
-data=pd.read_csv("data/some_posts.csv")
 # YOUR CODE HERE 1
 ```
 
