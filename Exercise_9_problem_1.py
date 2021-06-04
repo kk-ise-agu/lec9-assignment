@@ -28,6 +28,7 @@ latitudes = [63.748023986816406, 62.90789794921875, 60.511383056640625, 60.44499
 
 # Create a list of coordinate pairs
 # YOUR CODE HERE 1 
+coordpairs=None
 
 # Create a shapely Polygon using the 'coordpairs' -list
 # YOUR CODE HERE 2 
@@ -47,7 +48,6 @@ print(poly.geom_type)
 
 # Create an empty GeoDataFrame
 geo = None
-geo = gpd.GeoDataFrame()
 # YOUR CODE HERE 3
 
 # CODE FOR TESTING YOUR SOLUTION
@@ -85,4 +85,15 @@ assert os.path.isfile(fp), "Output file does not exits."
 # Next, you can continue to Exercise_9_problem_2.
 
 
+def func1():
+    return len(coordpairs)
+
+def func2():
+    return poly.geom_type
+
+def func3():
+    return geo
+
+def func4():
+    return geo
 

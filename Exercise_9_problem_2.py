@@ -10,8 +10,8 @@
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
-data=pd.read_csv("data/some_posts.csv")
-# YOUR CODE HERE 1
+# YOUR CODE HERE 1 to read data
+data = None
 
 
 # CODE FOR TESTING YOUR SOLUTION
@@ -31,7 +31,7 @@ import geopandas as gpd
 from pyproj import CRS
 
 # Convert DataFrame into a GeoDataFrame
-
+geo=None
 # CODE FOR TESTING YOUR SOLUTION
 
 # Check the geodataframe head
@@ -52,3 +52,11 @@ assert os.path.isfile(fp), "output shapefile does not exist"
 # YOUR CODE HERE 3
 
 # Well done! Now you can move on to Exercise_9_problem_3.
+
+def func5():
+    return data
+
+def func6():
+    return geo
+
+

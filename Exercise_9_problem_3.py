@@ -9,7 +9,7 @@
 # YOUR CODE HERE 1 to read data
 import geopandas as gpd
 from pyproj import CRS
-
+data=None
 
 # - Check the crs of the input data. If this information is missing, set it as epsg:4326 (WGS84).
 # - Reproject the data from WGS84 to `EPSG:32735` -projection which stands for UTM Zone 35S (UTM zone for South Africa) to transform the data into metric system. (don't create a new variable, update the existing variable `data`!)"
@@ -30,6 +30,7 @@ print(data.crs)
 #  - Group the data by userid
 
 #  YOUR CODE HERE 3 to group 
+grouped=None
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -43,7 +44,7 @@ assert len(grouped.groups) == data["userid"].nunique(), "Number of groups should
 # YOUR CODE HERE 4 to set movements
 import pandas as pd
 from shapely.geometry import LineString, Point
-
+movements=None
 # CODE FOR TESTING YOUR SOLUTION
 
 #Check the result
@@ -70,9 +71,6 @@ movements.head()
 #  - What was the mean distance travelled in meters?
 #  - What was the maximum distance travelled in meters?
 
-# In[11]:
-
-
 # YOUR CODE HERE 6 to find max, min,mean of the distance.
 
 # - Finally, save the movements of into a Shapefile called ``some_movements.shp``
@@ -88,3 +86,18 @@ assert os.path.isfile(fp), "Output file does not exits."
 
 
 # That's all for this week!
+#check length
+def func7():
+    return data
+
+#check type
+def func8():
+    return grouped 
+
+#check crs
+def func9():
+    return movements
+
+#check movements['distance']
+def func10():
+    return movements
