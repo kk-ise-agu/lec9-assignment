@@ -74,10 +74,9 @@ Please use the provided variable names (replace `None` with your own code).
 
 ```python
 # Create an empty GeoDataFrame
-geo = None
-geo = gpd.GeoDataFrame()
-# Insert the 'poly' -polygon into the 'geo' GeoDataFrame into a new column named 'geometry' 
 # YOUR CODE HERE 3
+geo = None
+# Insert the 'poly' -polygon into the 'geo' GeoDataFrame into a new column named 'geometry' 
 ```
 
 
@@ -103,7 +102,6 @@ print(len(geo))
 ```python
 # Plot the polygon. What shape is it :) ?
 # YOUR CODE HERE 4
-geo.plot()
 ```
 
 What can you see on the map? :) 
